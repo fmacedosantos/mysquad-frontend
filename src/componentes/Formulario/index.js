@@ -12,13 +12,16 @@ const Formulario = (props) => {
     const [time, setTime] = useState('Programação');
 
     const aoSalvar = (evento) => {
-        evento.preventDefault() 
+        evento.preventDefault();
         props.aoColaboradorCadastrado({
             nome,
             cargo,
             imagem,
             time
-        })
+        });
+        setNome('');
+        setCargo('');
+        setImagem('');
     }
 
     return (
