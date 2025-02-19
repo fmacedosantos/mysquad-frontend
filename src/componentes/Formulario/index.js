@@ -10,16 +10,6 @@ const Formulario = (props) => {
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('Programação');
-    
-    const times = [
-        'Programação',
-        "Front-End",
-        "Data Science",
-        "Devops",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão"
-    ]
 
     const aoSalvar = (evento) => {
         evento.preventDefault() 
@@ -58,7 +48,7 @@ const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Times" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
